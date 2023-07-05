@@ -5,7 +5,12 @@ let m_uri = process.env.MONGO_URI;
 
 m_connect.connect(m_uri,{useNewUrlParser: true, useUnifiedTopology: true});
 
-let Person;
+let personSchema = function(done){
+  let name = "";
+  let age = 0;
+  let favoriteFoods = [""];
+};
+let Person = new personSchema;
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
