@@ -5,7 +5,7 @@ let Person;
 let m_uri = process.env.MONGO_URI;
 m_connect.connect(m_uri,{useNewUrlParser: true, useUnifiedTopology: true});
 
-let personSchema = new mongoose.Schema({
+let personSchema = new m_connect.Schema({
   name:{
     type: String,
     required: true
@@ -14,7 +14,7 @@ let personSchema = new mongoose.Schema({
   favoriteFoods: [String]
 });
 
-Person = mongoose.model('p1',personSchema);
+Person = m_connect.model('p1',personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
