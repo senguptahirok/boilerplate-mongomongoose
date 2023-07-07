@@ -10,8 +10,12 @@ let personSchema = new m_connect.Schema({
     type: String,
     required: true
   },
-  age: Number,
-  favoriteFoods: [String]
+  age:{
+    type: Number
+  },
+  favoriteFoods: {
+    type: [String]
+  }
 });
 
 Person = m_connect.model('p1',personSchema);
