@@ -1,8 +1,8 @@
 let m_connect = require('mongoose');
 require('dotenv').config();
 console.log('MONGO_URI = '+ process.env.MONGO_URI);
-let m_uri = process.env.MONGO_URI;
 let Person;
+let m_uri = process.env.MONGO_URI;
 m_connect.connect(m_uri,{useNewUrlParser: true, useUnifiedTopology: true});
 /*
 let personSchema = new mongoose.Schema({
