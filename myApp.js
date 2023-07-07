@@ -10,15 +10,11 @@ let personSchema = new m_connect.Schema({
     type: String,
     required: true
   },
-  age:{
-    type: Number
-  },
-  favoriteFoods: {
-    type: [String]
-  }
+  age: Number,
+  favoriteFoods: [String]
 });
 
-Person = m_connect.model('p1',personSchema);
+Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
