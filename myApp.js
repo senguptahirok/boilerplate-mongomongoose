@@ -17,6 +17,14 @@ let personSchema = new m_connect.Schema({
 Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = (done) => {
+  Person.save(function(err,data){
+    return ({
+      name: 'Hirok',
+      age: 40,
+      favoriteFoods: ['fish','egg','vegetables']
+    });
+
+  });
   done(null /*, data*/);
 };
 
