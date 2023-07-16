@@ -17,13 +17,11 @@ let personSchema = new m_connect.Schema({
 Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = (done) => {
-  Person.save(function(err,data){
-    return ({
-      name: 'Hirok',
-      age: 40,
-      favoriteFoods: ['fish','egg','vegetables']
-    });
-
+  let a = new Person();
+  a.save(function(err,data){
+    a.name = 'Hirok';
+    a.age = 40;
+    a.favoriteFoods = ['rice','wheat'];
   });
   done(null /*, data*/);
 };
