@@ -18,10 +18,10 @@ Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = (done) => {
   let data = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
-  //let b = new Person(a);
+  let b = new Person();
   b.save(function(err,data){
     if (err) throw err;
-    console.log(data);
+    console.log('data = ' + data);
     return;
   })
 
