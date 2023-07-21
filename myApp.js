@@ -21,11 +21,9 @@ const createAndSavePerson = (done) => {
   let b = new Person(a);
   b.save(function(err,data){
     if (err) 
-      console.log('obj save failed')
-    return;
+      return console.error(err);
+    done(null /*, data*/);
   })
-
-  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
