@@ -22,8 +22,6 @@ const createAndSavePerson = (done) => {
   b.save(function(err,data){
     if (err) 
       console.log('obj save failed')
-    else
-      console.log('save was successful');
     return;
   })
 
