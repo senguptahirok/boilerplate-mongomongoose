@@ -24,7 +24,6 @@ const createAndSavePerson = (done) => {
       console.log('object Person was saved successfully');
     else
       console.log('err in saving the object Person');
-    return;      
   })
   done(null /*, data*/);
 };
