@@ -20,10 +20,11 @@ const createAndSavePerson = (done) => {
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
   b.save(function(err,data){
-    if (err) {
-      console.log('there is some error in saving the object');
-      return err; 
-    }  
+    if (data) 
+      console.log('object Person was saved successfully');
+    else
+      console.log('err in saving the object Person');
+    return;      
   })
   done(null /*, data*/);
 };
