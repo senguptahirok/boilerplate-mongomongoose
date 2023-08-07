@@ -19,12 +19,16 @@ Person = m_connect.model('Person',personSchema);
 const createAndSavePerson = (done) => {
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
+  console.log('pos 1');
   b.save(function(err,data){
+    console.log('pos 2');
     console.log('data = ' + data);
     if (err) console.log('error =' + err);
   })
   //done();
+  console.log('pos 3');
   done(null /*, data*/);
+  console.log('pos 4');
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
