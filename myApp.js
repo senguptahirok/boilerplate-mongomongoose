@@ -20,10 +20,11 @@ const createAndSavePerson = (done) => {
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
   b.save(function(err,data){
+    console.log('data = ' + data);
     if (err) console.log('error =' + err);
   })
-  done();
-  //done(null /*, data*/);
+  //done();
+  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
