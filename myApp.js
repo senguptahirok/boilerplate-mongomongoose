@@ -20,10 +20,12 @@ const createAndSavePerson = (done) => {
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
   b.save(function(err,data){
-    if (err) 
-      return console.error(err);
-    done(null /*, data*/);
+    if (err) {
+      console.log('there is some error in saving the object');
+      return err; 
+    }  
   })
+  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
