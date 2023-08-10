@@ -17,9 +17,9 @@ let personSchema = new m_connect.Schema({
 Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = (done) => {
+  console.log('pos 1');
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
-  console.log('pos 1');
   b.save(function(err,data){
     console.log('pos 2');
     console.log('data = ' + data);
@@ -82,7 +82,9 @@ const queryChain = (done) => {
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
 exports.PersonModel = Person;
+console.log('call area pos 1');
 exports.createAndSavePerson = createAndSavePerson;
+console.log('call area pos 2');
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
