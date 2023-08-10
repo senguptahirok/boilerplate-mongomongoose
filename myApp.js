@@ -16,7 +16,7 @@ let personSchema = new m_connect.Schema({
 
 let Person = m_connect.model('Person',personSchema);
 
-const createAndSavePerson = (done) => {
+let createAndSavePerson = (done) => {
   console.log('pos 1');
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
