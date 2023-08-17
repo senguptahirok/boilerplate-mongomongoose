@@ -81,7 +81,8 @@ const queryChain = (done) => {
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
-exports.PersonModel = Person;
+//exports.PersonModel = Person;
+exports.Person = Person;
 console.log('call area pos 1');
 exports.createAndSavePerson = createAndSavePerson;
 console.log('call area pos 2');
