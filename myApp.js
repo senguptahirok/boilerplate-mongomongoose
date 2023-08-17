@@ -86,6 +86,7 @@ const queryChain = (done) => {
 console.log('call area pos 1');
 exports.createAndSavePerson = createAndSavePerson;
 console.log('call area pos 2');
+console.log('call area pos 3');
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
