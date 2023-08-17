@@ -27,7 +27,7 @@ let createAndSavePerson = (done) => {
   })
   //done();
   console.log('pos 3');
-  done(null , data);
+  //done(null , data);
   console.log('pos 4');
 };
 
