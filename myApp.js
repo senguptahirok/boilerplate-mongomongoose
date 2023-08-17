@@ -1,7 +1,7 @@
 let m_connect = require('mongoose');
 require('dotenv').config();
 //console.log('MONGO_URI = '+ process.env.MONGO_URI);
-//let Person;
+let Person;
 let m_uri = process.env.MONGO_URI;
 m_connect.connect(m_uri,{useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -14,7 +14,7 @@ let personSchema = new m_connect.Schema({
   favoriteFoods: [String]
 });
 
-let Person = m_connect.model('Person',personSchema);
+Person = m_connect.model('Person',personSchema);
 
 let createAndSavePerson = (done) => {
   console.log('pos 1');
@@ -27,7 +27,7 @@ let createAndSavePerson = (done) => {
   })
   //done();
   console.log('pos 3');
-  //done(null , data);
+  done(null , data);
   console.log('pos 4');
 };
 
@@ -81,7 +81,7 @@ const queryChain = (done) => {
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
-//exports.PersonModel = Person;
+exports.PersonModel = Person;
 //exports.Person = Person;
 console.log('call area pos 1');
 exports.createAndSavePerson = createAndSavePerson;
