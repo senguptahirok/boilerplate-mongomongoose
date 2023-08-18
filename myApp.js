@@ -82,9 +82,9 @@ const queryChain = (done) => {
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
 exports.PersonModel = Person;
-//exports.Person = Person;
 console.log('call area pos 1');
-exports.createAndSavePerson = Person.createAndSavePerson;
+//exports.createAndSavePerson = createAndSavePerson;
+exports.PersonModel.createAndSavePerson = createAndSavePerson;
 console.log('call area pos 2');
 console.log('call area pos 3');
 exports.findPeopleByName = findPeopleByName;
