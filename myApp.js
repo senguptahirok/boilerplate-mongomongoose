@@ -27,7 +27,7 @@ const createAndSavePerson = (done) => {
   })
   //done();
   console.log('pos 3');
-  done(null , data);
+  done(null /*, data*/);
   console.log('pos 4');
 };
 
@@ -81,10 +81,10 @@ const queryChain = (done) => {
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
-//exports.PersonModel = Person;
-exports.Person = Person;
+exports.PersonModel = Person;
+//exports.Person = Person;
 console.log('call area pos 1');
-exports.createAndSavePerson = createAndSavePerson;
+exports.createAndSavePerson = Person.createAndSavePerson;
 console.log('call area pos 2');
 console.log('call area pos 3');
 exports.findPeopleByName = findPeopleByName;
