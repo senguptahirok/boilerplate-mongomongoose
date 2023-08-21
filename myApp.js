@@ -17,18 +17,20 @@ let personSchema = new m_connect.Schema({
 Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = (done) => {
-  console.log('pos 1');
+  //console.log('pos 1');
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
-  b.save(function(err,data){
+  console.log('a = ' + a);
+  console.log('b = ' + b);
+  /*b.save(function(err,data){
     console.log('pos 2');
     console.log('data = ' + data);
     if (err) console.log('error =' + err);
-  })
+  })*/
   //done();
-  console.log('pos 3');
-  done(null /*, data*/);
-  console.log('pos 4');
+  //console.log('pos 3');
+  //done(null /*, data*/);
+  //console.log('pos 4');
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
