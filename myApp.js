@@ -17,7 +17,6 @@ let personSchema = new m_connect.Schema({
 Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = function(done) {
-  console.log('pos 1');
   let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
   console.log('a = ' + a);
@@ -27,10 +26,7 @@ const createAndSavePerson = function(done) {
     console.log('data = ' + data);
     if (err) console.log('error =' + err);
   })
-  //done();
-  console.log('pos 3');
   done(null /*, data*/);
-  console.log('pos 4');
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
@@ -85,7 +81,19 @@ const queryChain = (done) => {
 
 exports.PersonModel = Person;
 console.log('call area pos 1');
-exports.createAndSavePerson = createAndSavePerson;
+//exports.createAndSavePerson = createAndSavePerson;
+exports.createAndSavePerson = function(done) {
+  let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
+  let b = new Person(a);
+  console.log('a = ' + a);
+  console.log('b = ' + b);
+  b.save(function(err,data){
+    console.log('pos 2');
+    console.log('data = ' + data);
+    if (err) console.log('error =' + err);
+  })
+  done(null /*, data*/);
+};
 console.log(' +++++ start exports.createAndSavePerson +++++');
 console.log(exports.createAndSavePerson);
 console.log(' +++++ end exports.createAndSavePerson +++++');
