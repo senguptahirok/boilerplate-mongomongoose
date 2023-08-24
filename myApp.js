@@ -25,8 +25,8 @@ const createAndSavePerson = function(done) {
     console.log('pos 2');
     console.log('data = ' + data);
     if (err) console.log('error =' + err);
+    else done(null /*, data*/);
   })
-  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
