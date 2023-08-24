@@ -81,19 +81,7 @@ const queryChain = (done) => {
 
 exports.PersonModel = Person;
 console.log('call area pos 1');
-//exports.createAndSavePerson = createAndSavePerson;
-exports.createAndSavePerson = function(done) {
-  let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
-  let b = new Person(a);
-  console.log('a = ' + a);
-  console.log('b = ' + b);
-  b.save(function(err,data){
-    console.log('pos 2');
-    console.log('data = ' + data);
-    if (err) console.log('error =' + err);
-  })
-  done(null /*, data*/);
-};
+exports.createAndSavePerson = createAndSavePerson;
 console.log(' +++++ start exports.createAndSavePerson +++++');
 console.log(exports.createAndSavePerson);
 console.log(' +++++ end exports.createAndSavePerson +++++');
