@@ -17,7 +17,7 @@ let personSchema = new m_connect.Schema({
 Person = m_connect.model('Person',personSchema);
 
 const createAndSavePerson = function(done) {
-  let a = {name: 'hirok', age: 40, favoriteFoods: ['rice', 'bread']};
+  let a = {name: 'tukai', age: 41, favoriteFoods: ['rice', 'bread']};
   let b = new Person(a);
   console.log('a = ' + a);
   console.log('b = ' + b);
@@ -25,7 +25,7 @@ const createAndSavePerson = function(done) {
     console.log('pos 2');
     console.log('data = ' + data);
     if (err) console.log('error =' + err);
-    else console.log('data = ' + data);
+    // else console.log('data = ' + data);
   })
   done(null /*, data*/)
 };
@@ -84,7 +84,7 @@ exports.PersonModel = Person;
 console.log('call area pos 1');
 exports.createAndSavePerson = createAndSavePerson;
 console.log(' +++++ start exports.createAndSavePerson +++++');
-console.log(exports.createAndSavePerson);
+console.log(createAndSavePerson);
 console.log(' +++++ end exports.createAndSavePerson +++++');
 console.log('call area pos 2');
 console.log('call area pos 3');
