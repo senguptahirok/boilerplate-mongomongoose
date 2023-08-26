@@ -24,12 +24,13 @@ const createAndSavePerson = function(done) {
   b.save(function(err,data){
     console.log('pos 2');
     console.log('data = ' + data);
-    if (err) 
+/*    if (err) {
       console.log('error =' + err);
+    }
     else 
-      done(null, data);
+      done(null, data); */
   })
-  // done(null /*, data*/)
+  done(null, data);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
