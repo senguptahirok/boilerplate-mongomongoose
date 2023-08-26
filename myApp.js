@@ -24,10 +24,11 @@ const createAndSavePerson = function(done) {
   b.save(function(err,data){
     console.log('pos 2');
     console.log('data = ' + data);
-    if (err) console.log('error =' + err);
+    if (err) 
+      console.log('error =' + err);
     // else console.log('data = ' + data);
   })
-  //done(null /*, data*/)
+  done(null /*, data*/)
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
@@ -81,13 +82,10 @@ const queryChain = (done) => {
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
 exports.PersonModel = Person;
-console.log('call area pos 1');
 exports.createAndSavePerson = createAndSavePerson;
 console.log(' +++++ start exports.createAndSavePerson +++++');
 console.log(createAndSavePerson);
 console.log(' +++++ end exports.createAndSavePerson +++++');
-console.log('call area pos 2');
-console.log('call area pos 3');
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
