@@ -21,16 +21,17 @@ const createAndSavePerson = function(done) {
   let b = new Person(a);
   console.log('a = ' + a);
   console.log('b = ' + b);
-  b.save(function(err,data){
+  b.save(function(data, error){
     console.log('pos 2');
-    console.log('data = ' + data);
-/*    if (err) {
-      console.log('error =' + err);
+    // console.log('data = ' + data);
+    if (error) {
+      console.log(error);
     }
-    else 
-      done(null, data); */
+    else {
+      done(null, data); 
+    }
   })
-  done(null, data);
+  // done(null, data);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
