@@ -26,10 +26,11 @@ const createAndSavePerson = (done) => {
     // console.log('data = ' + data);
     if (err) 
       console.log('error = ' + err);
-    else 
-      done(null, data);
+/*  else 
+      done(null, data); */
     console.log('*** leaving function save ***');
   })
+  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
