@@ -26,8 +26,8 @@ const createAndSavePerson = (done) => {
     // console.log('data = ' + data);
     if (err) 
       console.log('error = ' + err);
-    else 
-      console.log('data = ' + data); 
+/*    else 
+      console.log('data = ' + data); */
     console.log('*** leaving function save ***');
     done(null, data);
   })
