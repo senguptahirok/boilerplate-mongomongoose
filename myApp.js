@@ -35,6 +35,9 @@ const createAndSavePerson = (done) => {
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
+  arrayOfPeople = [{name: 'sumita', age: 67, favoriteFoods: ['rosogolla', 'fish']},
+                   {name: 'debjani', age: 37, favoriteFoods: ['falafel', 'pasta']}];
+  Person.create(arrayOfPeople);  
   done(null /*, data*/);
 };
 
@@ -86,9 +89,6 @@ const queryChain = (done) => {
 
 exports.PersonModel = Person;
 exports.createAndSavePerson = createAndSavePerson;
-console.log(' +++++ start exports.createAndSavePerson +++++');
-console.log(createAndSavePerson);
-console.log(' +++++ end exports.createAndSavePerson +++++');
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
