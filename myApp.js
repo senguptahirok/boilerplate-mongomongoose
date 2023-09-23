@@ -29,15 +29,15 @@ const createAndSavePerson = (done) => {
 /*    else 
       console.log('data = ' + data); */
     console.log('*** leaving function save ***');
-    done(null, data);
+    //done(null, data);
   })
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  arrayOfPeople = [{name: 'sumita', age: 67, favoriteFoods: ['rosogolla', 'fish']},
-                   {name: 'debjani', age: 37, favoriteFoods: ['falafel', 'pasta']},
-                   {name: 'hirok',age: 41, favoriteFoods:['yoghurt','banana']}];
+  arrayOfPeople = [{name: 'sumita sengupta', age: 67, favoriteFoods: ['rosogolla', 'fish']},
+                   {name: 'debjani baidyaray', age: 37, favoriteFoods: ['falafel', 'pasta']},
+                   {name: 'hirok sengupta',age: 41, favoriteFoods:['yoghurt','banana']}];
   Person.create(arrayOfPeople);  
   done(null /*, data*/);
 };
