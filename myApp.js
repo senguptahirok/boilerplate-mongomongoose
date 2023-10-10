@@ -39,16 +39,13 @@ const createManyPeople = (arrayOfPeople, done) => {
                    {name: 'hirok', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
                    {name: 'ganesh',age: 37, favoriteFoods:['potol','mushroom']}];
   Person.create(arrayOfPeople, function(err,data){
-    if (err){
-      console.log ('in err');
+    if (err)
       console.log('error = ' + err);
-    }
-    else{
-      console.log('not in err');
-    }  
-  //    done(null, data);
+    else
+      return;
+    done(null, data);
   });
-  done(null /*, data*/);
+  //done(null /*, data*/);
 };
 
 const findPeopleByName = (personName, done) => {
