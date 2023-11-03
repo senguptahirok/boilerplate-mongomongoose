@@ -41,12 +41,15 @@ const createManyPeople = (arrayOfPeople, done) => {
   Person.create(arrayOfPeople, function(err,data,callback){
     if (err)
       console.log('error = ' + err);
-    else {
+    else 
       console.log('data = ' + data);
+
+    if(callback) {
+      console.log('having callback');
       callback();
     }
+    else console.log('callback ends');  
 //    done(null, data);  
-//    return;
   });
   done(null /*, data*/);
 };
