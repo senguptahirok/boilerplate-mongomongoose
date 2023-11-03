@@ -39,9 +39,9 @@ const createManyPeople = (arrayOfPeople, done) => {
                    {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
                    {name: 'tuk',age: 35, favoriteFoods:['potol','mushroom']}];
   Person.create(arrayOfPeople, function(err, data){
-    done(null, data);  
+//    done(null, data);  
   });
- //done(null /*, data*/);
+ done(null /*, data*/);
 };
 
 const findPeopleByName = (personName, done) => {
