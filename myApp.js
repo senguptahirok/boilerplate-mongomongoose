@@ -44,10 +44,10 @@ const createManyPeople = (arrayOfPeople, done) => {
     else
       console.log('data = ' + data);
 
-    done(null, data);  
+//    done(null, data);  
 //    return;
   });
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 const findPeopleByName = (personName, done) => {
