@@ -35,23 +35,17 @@ const createAndSavePerson = (done) => {
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
-  arrayOfPeople = [{name: 'bubui03', age: 27, favoriteFoods: ['coffee', 'bread']},
-                   {name: 'tukai02', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
-                   {name: 'tuk04',age: 35, favoriteFoods:['potol','mushroom']}];
-  Person.create(arrayOfPeople, function(err,data,callback){
+  arrayOfPeople = [{name: 'bubui', age: 27, favoriteFoods: ['coffee', 'bread']},
+                   {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
+                   {name: 'tuk',age: 35, favoriteFoods:['potol','mushroom']}];
+  Person.create(arrayOfPeople, function(err,data){
     if (err)
       console.log('error = ' + err);
     else 
       console.log('data = ' + data);
-
-    if(callback) {
-      console.log('having callback');
-      callback();
-    }
-    else console.log('callback ends');  
-//    done(null, data);  
+    done(null, data);  
   });
-  done(null /*, data*/);
+ // done(null /*, data*/);
 };
 
 const findPeopleByName = (personName, done) => {
