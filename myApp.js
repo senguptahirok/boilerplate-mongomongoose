@@ -38,9 +38,9 @@ let arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']}
                      {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
                      {name: 'anuska',age: 26, favoriteFoods:['potol','mushroom']}];*/
 const createManyPeople = (arrayOfPeople, done) => {
-  let arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']},
-                       {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
-                       {name: 'anuska',age: 26, favoriteFoods:['potol','mushroom']}];
+  arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']},
+                   {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
+                   {name: 'anuska',age: 26, favoriteFoods:['potol','mushroom']}];
   Person.create(arrayOfPeople, function(err, data){
     if (err) console.log('error = ' + err);
     else console.log('data = ' + data);
