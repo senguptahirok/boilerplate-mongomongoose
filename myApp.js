@@ -54,9 +54,9 @@ const findPeopleByName = (personName, done) => {
   Person.find(personName,function(err,data){
     if (err) console.log('error = ' + err);
     else console.log('data was found = ' + data);
-  //  done(null,data);
+    done(null,data);
   })
-  done(null /*, data*/);
+  //done(null /*, data*/);
 };
 
 const findOneByFood = (food, done) => {
