@@ -29,14 +29,14 @@ const createAndSavePerson = (done) => {
 /*    else 
       console.log('data = ' + data); */
     console.log('*** leaving function save ***');
-//    done(null, data);
+    done(null, data);
   })
- done(null /*, data*/);
+// done(null /*, data*/);
 };
 
-let arrayOfPeople = [{name: 'bubui', age: 27, favoriteFoods: ['coffee', 'bread']},
+let arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']},
                      {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
-                     {name: 'tuk',age: 35, favoriteFoods:['potol','mushroom']}];
+                     {name: 'anuska',age: 26, favoriteFoods:['potol','mushroom']}];
 const createManyPeople = (arrayOfPeople, done) => {
   Person.create(arrayOfPeople, function(err, data){
     if (err) console.log('error = ' + err);
