@@ -29,9 +29,9 @@ const createAndSavePerson = (done) => {
 /*    else 
       console.log('data = ' + data); */
     console.log('*** leaving function save ***');
-    done(null, data);
+//    done(null, data);
   })
-// done(null /*, data*/);
+ done(null /*, data*/);
 };
 /*
 let arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']},
