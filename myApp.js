@@ -40,7 +40,7 @@ let arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']}
 const createManyPeople = (arrayOfPeople, done) => {
   arrayOfPeople = [{name: 'ashim', age: 40, favoriteFoods: ['mutton', 'rice']},
                    {name: 'tukai', age: 41, favoriteFoods: ['paneer', 'bakarwadi']},
-                   {name: 'anuska',age: 26, favoriteFoods:['potol','mushroom']}];
+                   {name: 'ashim',age: 26, favoriteFoods:['potol','mushroom']}];
   Person.create(arrayOfPeople, function(err, data){
     if (err) console.log('error = ' + err);
     else console.log('data = ' + data);
@@ -51,9 +51,11 @@ const createManyPeople = (arrayOfPeople, done) => {
 
 const findPeopleByName = (personName, done) => {
   personName =  'ashim'; 
-  Person.find([{name: personName}],function(err,personFound){
-//    if (err) return console.log('error = ' + err);
-    console.log('data was found = ' + personFound);
+  Person.find({name: personName},function(err,personFound){
+    if (err) {
+      console.log('error = ' + err);}
+    else {
+      console.log('data was found = ' + personFound);}
     done(null,personFound);
   })
 // done(null /*, data*/);
