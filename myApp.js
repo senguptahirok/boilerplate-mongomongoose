@@ -44,9 +44,9 @@ const createManyPeople = (arrayOfPeople, done) => {
   Person.create(arrayOfPeople, function(err, data){
     if (err) console.log('error = ' + err);
     else console.log('data = ' + data);
-  //  done(null, data);  
+      done(null, data);  
   });
-   done(null /*, data*/);
+  // done(null /*, data*/);
 };
 
 const findPeopleByName = (personName, done) => {
