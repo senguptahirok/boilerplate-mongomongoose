@@ -77,12 +77,10 @@ const findOneByFood = (food, done) => {
 let id = '65aa6f2077e40400713f04af';
 const findPersonById = (personId, done) => {
   Person.findById({personId: id},function(err,data){
-   if (err){
+   if (err)
      console.log('error = ' + err);
-   }
-   else{
+   else
      console.log('data was found by id = ' + data); 
-   }
    done (null,data);
   })
   //done(null /*, data*/);
