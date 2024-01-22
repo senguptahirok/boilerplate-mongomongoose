@@ -94,7 +94,8 @@ const findEditThenSave = (personId, done) => {
     else console.log('food to add was a success ',data); 
     done(null, data);
   })
-  .update(favoriteFoods.push(foodToAdd));
+  .update(favoriteFoods.push(foodToAdd))
+  .save();
   //done(null /*, data*/);
 };
 
