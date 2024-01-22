@@ -89,7 +89,7 @@ const findPersonById = (personId, done) => {
 let id1 = '65aa6f2077e40400713f04af';
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
-  Person.findByid({personId:id1},function(err,data){
+  Person.findById({personId:id1},function(err,data){
     if (err) console.log('error in findById !!');
     else {
       Person.update(favoriteFoods.push(foodToAdd));
