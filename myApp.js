@@ -86,17 +86,12 @@ const findPersonById = (personId, done) => {
   //done(null /*, data*/);
 };
 
-let id1 = '65aa6f2077e40400713f04af';
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
-  Person.update()
-        .findById({personId:id1},function(err,data){
-          if (err) console.log('error in findById');
-          else {
-            favoriteFoods.push(foodToAdd);
-            save(data);
-          }
-        }); 
+  Person.update({personId: id},favoriteFoods.push(foodToAdd),function(err,data){
+    if (err) console.log('error in findEditThenSave ',err);
+    else data.save();
+  })
   done(null /*, data*/);
 };
 
