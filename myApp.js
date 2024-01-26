@@ -86,16 +86,17 @@ const findPersonById = (personId, done) => {
   //done(null /*, data*/);
 };
 
+let id1 = '65aa6f2077e40400713f04ae';
 const findEditThenSave = (personId, done) => {
-  const foodToAdd = "hamburger";
-  Person.findById({personId: id},function(err,data){
+  //const foodToAdd = "hamburger";
+  Person.findById({personId: id1},function(err,data){
     if (err) console.log('error in findEditThenSave ',err);
     else {
-      console.log('data = ',data);
+      console.log('data = ' + data);
     }
-    done(null,data);
+    //done(null,data);
   })
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 const findAndUpdate = (personName, done) => {
