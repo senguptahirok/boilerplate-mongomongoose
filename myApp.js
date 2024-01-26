@@ -94,8 +94,9 @@ const findEditThenSave = (personId, done) => {
       favoriteFoods.push(foodToAdd);
       data.save();
     }
+    done(null,data);
   })
-  done(null /*, data*/);
+//  done(null /*, data*/);
 };
 
 const findAndUpdate = (personName, done) => {
