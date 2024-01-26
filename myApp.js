@@ -88,7 +88,7 @@ const findPersonById = (personId, done) => {
 
 //let id1 = '65aa6f2077e40400713f04ae';
 let naM = 'saptarshi';
-const findEditThenSave = (personId, done) => {
+const findEditThenSave = (naM, done) => {
   //const foodToAdd = "hamburger";
   Person.findById({name: naM},function(err,data){
     if (err) console.log('error in findEditThenSave ',err);
