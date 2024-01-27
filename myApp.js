@@ -74,8 +74,8 @@ const findOneByFood = (food, done) => {
   //done(null /*, data*/);
 };
 
-let personId = '65aa6f2077e40400713f04af';
 const findPersonById = (personId, done) => {
+  personId = '65aa6f2077e40400713f04af';
   Person.findById({_id: personId},function(err,data){
    if (err)
      console.log('error = ' + err);
