@@ -62,14 +62,14 @@ const findPeopleByName = (personName, done) => {
 // done(null /*, data*/);
 };
 
-let food = ['paneer','bakarwadi'];
+let food = ['potol','mushroom'];
 const findOneByFood = (food, done) => {
-  Person.findOne({favoriteFoods: food},function(err,personFound){
+  Person.findOne({favoriteFoods: food},function(err,data){
     if (err)
       console.log('error = ' + err);
     else 
-      console.log('data was found = '+ personFound)
-    done(null, personFound);
+      console.log('data was found = '+ data)
+    done(null, data);
   })
   //done(null /*, data*/);
 };
