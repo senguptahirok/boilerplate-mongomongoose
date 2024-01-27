@@ -68,7 +68,7 @@ const findOneByFood = (food, done) => {
     if (err)
       console.log('error = ' + err);
     else 
-      console.log('data was found, age = '+ data[age]);
+      console.log('data was found, age = '+ data);
     done(null, data);
   })
   //done(null /*, data*/);
