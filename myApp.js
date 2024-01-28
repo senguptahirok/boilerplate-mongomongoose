@@ -86,7 +86,7 @@ const findPersonById = (personId, done) => {
   //done(null /*, data*/);
 };
 
-personId = '65aa6f2077e40400713f04ae';
+personId = '65b63db24ee58c005dad1b40';
 const findEditThenSave = (personId, done) => {
   const foodToAdd = "hamburger";
   Person.findById({_id: personId},function(err,data){
@@ -95,8 +95,8 @@ const findEditThenSave = (personId, done) => {
       data.favoriteFoods.push(foodToAdd);
       data.save();
       console.log('data was updated, data = ' + data);
-      done(null,data);
-    }  
+    }
+    done(null,data);
   })
 //  done(null /*, data*/);
 };
