@@ -94,10 +94,14 @@ const findEditThenSave = (personId, done) => {
     if (err) console.log('error in findEditThenSave ',err);
     else {
       data.favoriteFoods.push(foodToAdd);
-      data.save();
-      console.log('data was updated, data = ' + data);
+      data.save(function(err,updatedData){
+        if (err) console.log('err in update '+ err);
+        else console.log('data was updated, updatedData = '+ updatedData);
+        done(null,updatedData);
+      });
+//      console.log('data was updated, data = ' + data);
     }
-    done(null,data);
+//    done(null,data);
   })
 //  done(null /*, data*/);
 };
