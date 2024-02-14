@@ -119,7 +119,7 @@ const findAndUpdate = (personName, done) => {
         done(null,updatedData);
       });
     }  
-  },{new:true});
+  });
   //done(null /*, data*/);
 };
 
