@@ -49,7 +49,7 @@ const createManyPeople = (arrayOfPeople, done) => {
    done(null /*, data*/);
 };
 
-let personName = 'ashim';
+let personName = 'joel';
 const findPeopleByName = (personName, done) => {
   //personName =  {name:'ashim'}; 
   Person.find({name: personName},function(err,personFound){
@@ -106,20 +106,22 @@ const findEditThenSave = (personId, done) => {
 //  done(null /*, data*/);
 };
 
-personName = 'joel';
+//personName = 'joel';
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
-  Person.findOneAndUpdate(personName,function(err,data){
+  Person.findOneAndUpdate({name: personName},function(err,data){
     if (err) console.log('error in find by personName'+err);
     else {
+      console.log('age of '+ data.name + 'is' + data.age);
       data.age = ageToSet;
+      console.log('age was updated');
       data.save(function(err,updatedData){
         if (err) console.log('err in update' + err);
         else console.log('data was updated ' + updatedData);
         done(null,updatedData);
       });
     }  
-  });
+  },{new:true});
   //done(null /*, data*/);
 };
 
