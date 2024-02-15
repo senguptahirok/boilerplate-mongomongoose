@@ -112,7 +112,7 @@ const findAndUpdate = (personName, done) => {
   console.log('before findOneAndUpdate');
   Person.findOneAndUpdate({name: personName},function(err,data){
     console.log('inside findOneAndUpdate');
-    if (err) console.log('error in find by personName'+err);
+    if (err) console.log('error in find by personName' + err);
     else {
       console.log('age of '+ data.name + 'is' + data.age);
       data.age = ageToSet;
@@ -124,7 +124,7 @@ const findAndUpdate = (personName, done) => {
       });
     }
     done(null,data);  
-  });
+  },{new: true});
 //done(null /*, data*/);
 };
 
