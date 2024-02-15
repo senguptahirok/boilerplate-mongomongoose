@@ -101,7 +101,7 @@ const findEditThenSave = (personId, done) => {
       });
 //      console.log('data was updated, data = ' + data);
     }
-//    done(null,data);
+    done(null,data);
   })
 //  done(null /*, data*/);
 };
