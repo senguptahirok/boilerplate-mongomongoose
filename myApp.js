@@ -123,7 +123,7 @@ const findAndUpdate = (personName, done) => {
         done(null,updatedData);
       });
     }
-    done(null,data);  
+//    done(null,data);  
   },{new: true});
 done(null /*, data*/);
 };
