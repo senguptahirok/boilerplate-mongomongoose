@@ -103,7 +103,7 @@ const findEditThenSave = (personId, done) => {
     }
     done(null,data);
   })
-//  done(null /*, data*/);
+//done(null /*, data*/);
 };
 
 //personName = 'joel';
@@ -122,9 +122,10 @@ const findAndUpdate = (personName, done) => {
         else console.log('data was updated ' + updatedData);
         done(null,updatedData);
       });
-    }  
+    }
+    done(null,data);  
   },{new:true});
-  //done(null /*, data*/);
+//done(null /*, data*/);
 };
 
 const removeById = (personId, done) => {
