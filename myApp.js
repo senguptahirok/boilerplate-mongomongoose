@@ -115,8 +115,12 @@ const findAndUpdate = (personName, done) => {
     if (err) console.log('error in finding the name ' + err);
     else {
       data.age = ageToSet;
-      data.save();
-    }
+      data.save(function(err01,updatedData){
+        if (err01) console.log('error in updating ' + err01);
+        else console.log('age was updated, updated data is ' + updatedData);
+        done(null,updatedData);
+      })
+    }  
     done(null,data);
   }, {new: true});
 //done(null /*, data*/);
