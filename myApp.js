@@ -106,23 +106,16 @@ const findEditThenSave = (personId, done) => {
 //done(null /*, data*/);
 };
 
-//personName = 'joel';
+personName = 'joel';
 const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
   console.log('personName = ' + personName);
   console.log('before findOneAndUpdate');
-  Person.findOneAndUpdate({name: personName}, function(err,data){
+  Person.findOneAndUpdate({name: personName}, {$set:{age: ageToSet}},{new: true}, function(err,data){
     if (err) console.log('error in finding the name ' + err);
-    else {
-      data.age = ageToSet;
-      data.save(function(err01,updatedData){
-        if (err01) console.log('error in updating ' + err01);
-        else console.log('age was updated, updated data is ' + updatedData);
-        done(null,updatedData);
-      })
-    }  
+    else console.log('updated data is ' + data);
     done(null,data);
-  }, {new: true});
+  });
 //done(null /*, data*/);
 };
 
