@@ -111,12 +111,9 @@ const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
   console.log('personName = ' + personName);
   console.log('before findOneAndUpdate');
-  Person.findOneAndUpdate({name: personName}, {$set:{age: ageToSet}},{new: true}, function(err,data){
-    if (err) console.log('error in finding the name ' + err);
-    else console.log('updated data is ' + data);
-    done(null,data);
-  });
-//done(null /*, data*/);
+  Person.findOneAndUpdate({name: personName}, {$set:{age: ageToSet}},{new: true});
+  console.log('after findOneAndUpdate');
+  done(null /*, data*/);
 };
 
 const removeById = (personId, done) => {
