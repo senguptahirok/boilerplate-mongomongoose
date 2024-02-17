@@ -111,18 +111,11 @@ const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
   console.log('personName = ' + personName);
   console.log('before findOneAndUpdate');
-  Person.findOneAndUpdate({name: personName}, function(err,data){
-    console.log('data before update = ' + data);
-    if (err) console.log('error in finding '+personName);
-    else {
-      data.age = ageToSet;
-      data.save(function(err01,data01){
-        done(null,data01);
-        console.log('data after update = ' + data01);
-      })
-    }
-//    done(null,data);
-  },{new: true});
+  Person.findOneAndUpdate({name: personName},{$set:{age: ageToSet}},{new: true},function(err,data){
+    if (err) console.log('error in findOneAndUpdate' + err);
+    else console.log('updated data is ' + data);
+    done(null,data);
+  });
   console.log('after findOneAndUpdate');
 //  done(null /*, data*/);
 };
@@ -154,7 +147,7 @@ exports.createAndSavePerson = createAndSavePerson;
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
-//exports.findEditThenSave = findEditThenSave;
+exports.findEditThenSave = findEditThenSave;
 exports.findAndUpdate = findAndUpdate;
 exports.createManyPeople = createManyPeople;
 exports.removeById = removeById;
