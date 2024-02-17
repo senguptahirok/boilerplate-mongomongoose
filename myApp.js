@@ -121,7 +121,7 @@ const findAndUpdate = (personName, done) => {
         console.log('data after update = ' + data01);
       })
     }
-    done(null,data);
+//    done(null,data);
   },{new: true});
   console.log('after findOneAndUpdate');
 //  done(null /*, data*/);
