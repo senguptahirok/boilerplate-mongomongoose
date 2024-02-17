@@ -111,7 +111,7 @@ const findAndUpdate = (personName, done) => {
   const ageToSet = 20;
   console.log('personName = ' + personName);
   console.log('before findOneAndUpdate');
-  Person.findOneAndUpdate(personName, function(err,data){
+  Person.findOneAndUpdate({name: personName}, function(err,data){
     console.log('data before update = ' + data);
     if (err) console.log('error in finding '+personName);
     else {
