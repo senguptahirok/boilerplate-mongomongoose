@@ -74,7 +74,7 @@ const findOneByFood = (food, done) => {
   //done(null /*, data*/);
 };
 
-let personId = '65b63db24ee58c005dad1b41';
+let personId = '65d37992fd5711005c085baf';
 const findPersonById = (personId, done) => {
   Person.findById({_id: personId},function(err,data){
    if (err)
@@ -121,17 +121,19 @@ const findAndUpdate = (personName, done) => {
 //  done(null /*, data*/);
 };
 
-personId = '65d369786df8b30063127978';
+//personId = '65d369786df8b30063127978';
 const removeById = (personId, done) => {
-  Person.findByIdAndRemove({_id: personId},function(err,data){
+  console.log ('personId is : ' + personId);
+  Person.findByIdAndRemove(personId,function(err,data){
     if (err) console.log('error in finding the person detail by id' + err);
-    else {
+/*    else {
       data.save(function(err01,updatedData){
         if (err01) console.log('error in updating the document by id' + err01);
         else console.log('id :' + personId + 'was removed successfully!, updated data is ' + updatedData);
         done(null,updatedData);
       })
-    }
+    } */
+    else console.log('removed document is ' + data);
     done(null,data);
   })
 //  done(null /*, data*/);
