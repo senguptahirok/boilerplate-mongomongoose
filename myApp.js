@@ -121,6 +121,7 @@ const findAndUpdate = (personName, done) => {
 //  done(null /*, data*/);
 };
 
+personId = '65d369786df8b30063127978';
 const removeById = (personId, done) => {
   Person.findByIdAndRemove({_id: personId},function(err,data){
     if (err) console.log('error in finding the person detail by id' + err);
