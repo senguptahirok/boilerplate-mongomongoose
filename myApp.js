@@ -122,7 +122,18 @@ const findAndUpdate = (personName, done) => {
 };
 
 const removeById = (personId, done) => {
-  done(null /*, data*/);
+  Person.findByIdAndRemove({_id: personId},function(err,data){
+    if (err) console.log('error in finding the person detail by id' + err);
+    else {
+      data.save(function(err01,updatedData){
+        if (err01) console.log('error in updating the document by id' + err01);
+        else console.log('id :' + personId + 'was removed successfully!, updated data is ' + updatedData);
+        done(null,updatedData);
+      })
+    }
+    done(null,data);
+  })
+//  done(null /*, data*/);
 };
 
 const removeManyPeople = (done) => {
