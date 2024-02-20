@@ -141,10 +141,10 @@ const removeById = (personId, done) => {
 
 const removeManyPeople = (done) => {
   const nameToRemove = "joel";
-  Person.remove({name: nameToRemove},function(err,data){
+  Person.remove({name: nameToRemove},function(err){
     if (err) console.log('error in finding the document by name :'+ nameToRemove);
-    else console.log ('data = '+data);
-    done(null,data);
+    else console.log ('data was removed successfully :' + nameToRemove);
+    done(null);
   })
 //  done(null /*, data*/);
 };
