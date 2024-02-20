@@ -146,7 +146,7 @@ const removeManyPeople = (done) => {
     else console.log ('data = '+data);
     done(null,data);
   })
-  done(null /*, data*/);
+//  done(null /*, data*/);
 };
 
 const queryChain = (done) => {
