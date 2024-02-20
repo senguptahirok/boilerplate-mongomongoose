@@ -74,7 +74,7 @@ const findOneByFood = (food, done) => {
   //done(null /*, data*/);
 };
 
-let personId = '65d466b40c164d0071dc616b';
+let personId = '65d46d0896975b0071c0af59';
 const findPersonById = (personId, done) => {
   Person.findById({_id: personId},function(err,data){
    if (err)
@@ -124,7 +124,7 @@ const findAndUpdate = (personName, done) => {
 //personId = '65d369786df8b30063127978';
 const removeById = (personId, done) => {
   console.log ('personId is : ' + personId);
-  Person.findByIdAndRemove({_id: '65d46a3e44f464007297d9b4'},function(err,data){
+  Person.findByIdAndRemove(personId,function(err,data){
     if (err) console.log('error in finding the person detail by id' + err);
 /*    else {
       data.save(function(err01,updatedData){
