@@ -145,9 +145,9 @@ const removeManyPeople = (done) => {
   Person.remove({name: nameToRemove},function(err){
     if (err) console.log('error in finding the document by name :'+ nameToRemove);
     else console.log ('data was removed successfully');
-//    done(null,data);
+    done(null);
   })
-  done(null /*, data*/);
+//  done(null /*, data*/);
 };
 
 const queryChain = (done) => {
