@@ -139,14 +139,15 @@ const removeById = (personId, done) => {
 //  done(null /*, data*/);
 };
 
+let nameToRemove = 'joel';
 const removeManyPeople = (done) => {
-  const nameToRemove = "joel";
+//  const nameToRemove = "joel";
   Person.remove({name: nameToRemove},function(err,data){
     if (err) console.log('error in finding the document by name :'+ nameToRemove);
     else console.log ('data was removed successfully :' + data);
-    done(null,data);
+//    done(null,data);
   })
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 const queryChain = (done) => {
