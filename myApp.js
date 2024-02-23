@@ -142,8 +142,8 @@ const removeById = (personId, done) => {
 //let nameToRemove = 'joel';
 const removeManyPeople = (done) => {
   const nameToRemove = "joel";
-  Person.remove({name: nameToRemove},function(err, data){
-//  Person.deleteMany({name: nameToRemove},function(err, data){
+//  Person.remove({name: nameToRemove},function(err, data){
+  Person.deleteMany({name: nameToRemove},function(err, data){
     console.log('inside function remove');
     if (err) console.log('error in finding the document by name :'+ err);
     else {
