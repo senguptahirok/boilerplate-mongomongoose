@@ -146,7 +146,11 @@ const removeManyPeople = (done) => {
 //  Person.deleteMany({name: nameToRemove},function(err, data){
     console.log('inside function remove');
     if (err) console.log('error in finding the document by name :'+ err);
-    else console.log ('data was removed successfully, data = ' + data);
+    else {
+      data.ok = true;
+      data.n = data.deletedCount;
+      console.log ('data was removed successfully, data = ' + data);
+    }
     done(null, data);
     console.log('after done in remove');
   })
