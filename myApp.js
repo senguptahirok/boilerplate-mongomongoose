@@ -142,10 +142,10 @@ const removeById = (personId, done) => {
 //let nameToRemove = 'joel';
 const removeManyPeople = (done) => {
   const nameToRemove = "joel";
-  Person.remove({name: nameToRemove},function(err, response){
-    if (err) return console.log('error in finding the document by name :'+ err);
-    //else console.log ('data was removed successfully');
-    done(null, response);
+  Person.remove({name: nameToRemove},function(err, data){
+    if (err) console.log('error in finding the document by name :'+ err);
+    else console.log ('data was removed successfully, data = ' + data);
+    done(null, data);
   })
 //  done(null /*, data*/);
 };
@@ -170,6 +170,6 @@ exports.findPersonById = findPersonById;
 exports.findEditThenSave = findEditThenSave;
 exports.findAndUpdate = findAndUpdate;
 exports.createManyPeople = createManyPeople;
-exports.removeById = removeById;
+//exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;
 exports.queryChain = queryChain;
