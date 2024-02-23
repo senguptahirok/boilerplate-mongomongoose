@@ -136,7 +136,7 @@ const removeById = (personId, done) => {
     else console.log('removed document is ' + data);
     done(null,data);
   })
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 //let nameToRemove = 'joel';
