@@ -143,7 +143,7 @@ const removeById = (personId, done) => {
 const removeManyPeople = (done) => {
   const nameToRemove = "joel";
 //  Person.remove({name: nameToRemove},function(err, data){
-  Person.deleteMany({name: nameToRemove},function(err, data){
+  Person.remove({name: nameToRemove},function(err, data){
     console.log('inside function remove');
     if (err) console.log('error in finding the document by name :'+ err);
     else {
@@ -177,6 +177,6 @@ exports.findPersonById = findPersonById;
 exports.findEditThenSave = findEditThenSave;
 exports.findAndUpdate = findAndUpdate;
 exports.createManyPeople = createManyPeople;
-exports.removeById = removeById;
+//exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;
 exports.queryChain = queryChain;
