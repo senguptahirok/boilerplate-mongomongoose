@@ -166,7 +166,7 @@ const queryChain = (done) => {
   .exec(function(err,data){
     if (err) console.log('error msg, not found - '+err);
     else console.log('person was found with food '+foodToSearch+', person is :'+data);
-    done(null,data);
+    done(err,data);
   });
 //  done(null /*, data*/);
 };
