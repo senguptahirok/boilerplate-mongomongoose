@@ -123,20 +123,20 @@ const findAndUpdate = (personName, done) => {
 
 //personId = '65d369786df8b30063127978';
 const removeById = (personId, done) => {
-//  console.log ('personId is : ' + personId);
-//  Person.findByIdAndRemove(personId,function(err,data){
-//    if (err) console.log('error in finding the person detail by id' + err);
-/*    else {
+  console.log ('personId is : ' + personId);
+  Person.findByIdAndRemove(personId,function(err,data){
+    if (err) console.log('error in finding the person detail by id' + err);
+    else {
       data.save(function(err01,updatedData){
         if (err01) console.log('error in updating the document by id' + err01);
         else console.log('id :' + personId + 'was removed successfully!, updated data is ' + updatedData);
         done(null,updatedData);
       })
-    } */
+    } 
 //    else console.log('removed document is ' + data);
-//    done(null,data);
-//  })
-  done(null /*, data*/);
+    done(null,data);
+  })
+//  done(null /*, data*/);
 };
 
 //let nameToRemove = 'joel';
@@ -154,7 +154,7 @@ const removeManyPeople = (done) => {
     done(null, data);
     console.log('after done in remove');
   })
-  done(null /*, data*/);
+//  done(null /*, data*/);
 };
 
 const queryChain = (done) => {
