@@ -141,7 +141,7 @@ const removeById = (personId, done) => {
 
 //let nameToRemove = 'joel';
 const removeManyPeople = (done) => {
-  const nameToRemove = "joel";
+  const nameToRemove = "Mary";
 //  Person.remove({name: nameToRemove},function(err, data){
   Person.remove({name: nameToRemove},function(err, data){
     console.log('inside function remove');
@@ -154,7 +154,7 @@ const removeManyPeople = (done) => {
     done(null, data);
     console.log('after done in remove');
   })
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 const queryChain = (done) => {
