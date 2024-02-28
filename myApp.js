@@ -162,7 +162,7 @@ const queryChain = (done) => {
   Person.find({favoriteFoods: foodToSearch})
   .sort({name: 1})
   .limit(2)
-  .select()
+  .select({age: 0})
   .exec(function(err,data){
     if (err) console.log('error msg, not found - '+err);
     else console.log('person was found with food '+foodToSearch+', person is :'+data);
