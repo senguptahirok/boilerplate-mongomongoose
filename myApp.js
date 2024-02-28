@@ -154,7 +154,7 @@ const removeManyPeople = (done) => {
     done(null, data);
     console.log('after done in remove');
   })
-//  done(null /*, data*/);
+  done(null /*, data*/);
 };
 
 const queryChain = (done) => {
@@ -166,9 +166,9 @@ const queryChain = (done) => {
   .exec(function(err,data){
     if (err) console.log('error msg, not found - '+err);
     else console.log('person was found with food '+foodToSearch+', person is :'+data);
-//    done(err,data);
+    done(err,data);
   });
-  done(null /*, data*/);
+//  done(null /*, data*/);
 };
 
 /** **Well Done !!**
