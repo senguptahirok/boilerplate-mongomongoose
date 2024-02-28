@@ -168,7 +168,7 @@ const queryChain = (done) => {
     else console.log('person was found with food '+foodToSearch+', person is :'+data);
     done(err,data);
   });
-  done(null /*, data*/);
+//  done(null /*, data*/);
 };
 
 /** **Well Done !!**
